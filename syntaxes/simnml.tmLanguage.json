@@ -1,0 +1,60 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "simnml",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#chevrons"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.simnml",
+					"match": "\\b(if|for|endif|else|then|case|do|enddo|in)\\b"
+				},
+				{
+					"name": "keyword.other.simnml",
+					"match": "\\b(op|let|action|float|card|int|include|type|reg|mem|var|mode|volatile|uses|format|image|syntax|__attr|alias|assert|ports|bool|canon|coerce|default|enum|error|exception|extend|fix|initial|macro|not|resource|switch|volatile|[:punct:])\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.simnml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.simnml",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"begin": "//",
+			"end": "\n",
+			"name": "comment.line.simnml"
+		},
+		"chevrons": {
+			"begin": "<",
+			"end": ">",
+			"name": "keyword",
+			"patterns": [
+				{
+					"name": "keyword.operator.simnml.range",
+					"match": "\\b(.+?)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.nmp"
+}
