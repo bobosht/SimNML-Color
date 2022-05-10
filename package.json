@@ -10,16 +10,29 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "simnml",
-            "aliases": ["simnml", "simnml"],
-            "extensions": [".nmp",".nml"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "simnml",
-            "scopeName": "source.nmp",
-            "path": "./syntaxes/simnml.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "simnml",
+                "aliases": [
+                    "simnml",
+                    "simnml"
+                ],
+                "extensions": [
+                    ".nmp",
+                    ".nml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "simnml",
+                "scopeName": "source.nmp",
+                "path": "./syntaxes/simnml.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.0"
     }
 }
